@@ -1,0 +1,20 @@
+Display Name          | Target                                                      | Working Dir             | Elevated | Arguments                                                                                 
+----------------------|-------------------------------------------------------------|-------------------------|----------|-------------------------------------------------------------------------------------------
+; commented out exmpl | doesn't matter                                              |                         |          |
+Windows Terminal      | wt.exe                                                      |                         | True     |
+Process Hacker        | %bin%\ProcessHacker\ProcessHacker.exe                       |                         | True     |                                                                                           
+Environment Variables | %windir%\System32\rundll32.exe                              |                         | True     | sysdm.cpl,EditEnvironmentVariables                                                        
+Apps - Uninstall      | %windir%\explorer.exe                                       |                         |          | shell:::{7b81be6a-ce2b-4676-a29e-eb907a5126c5}                                            
+System Control Panel  | %windir%\explorer.exe                                       |                         |          | shell:::{BB06C0E4-D293-4f75-8A90-CB05B6477EEE}                                            
+Sound Control Panel   | %windir%\System32\rundll32.exe                              |                         |          | shell32.dll,Control_RunDLL mmsys.cpl                                                      
+Network Adapters      | %windir%\explorer.exe                                       |                         |          | shell:::{7007ACC7-3202-11D1-AAD2-00805FC1270E}                                            
+Power Control Panel   | %windir%\System32\rundll32.exe                              |                         |          | shell32.dll,Control_RunDLL PowerCfg.cpl @0,/editplan:381b4222-f694-41f0-9685-ff5bb260df2e 
+Task Scheduler        | %windir%\System32\taskschd.msc                              |                         |          | /s                                                                                        
+Certs                 | %windir%\System32\certlm.msc                                |                         |          |                                                                                           
+Device Manager        | %windir%\System32\devmgmt.msc                               |                         |          |                                                                                           
+Disk Management       | %windir%\System32\diskmgmt.msc                              |                         | True     |                                                                                           
+Event Viewer          | %windir%\System32\eventvwr.exe                              |                         |          |                                                                                           
+Services              | %windir%\System32\services.msc                              |                         | True     |                                                                                           
+Shared Folders        | %windir%\System32\fsmgmt.msc                                |                         |          |                                                                                           
+Local Security Policy | %windir%\System32\secpol.msc                                |                         |          | /s                                                                                        
+Local Users           | %windir%\System32\lusrmgr.msc                               |                         |          |                                                                                           
